@@ -1,0 +1,12 @@
+body {
+  background-color: #ffbb8f;
+}
+
+.header {
+  background-color: rgb(242, 155, 42);
+  height: 100px;
+}
+
+.header-img {
+  height: 100px;
+}
