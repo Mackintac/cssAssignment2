@@ -3,10 +3,22 @@ body {
 }
 
 .header {
-  background-color: rgb(242, 155, 42);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 100px;
+
+  background-color: rgb(242, 155, 42);
+
+  padding: 0 10px;
 }
 
 .header-img {
   height: 100px;
+}
+
+.header-estab {
+  color: #eeeeee;
+  font-family: 'Chewy';
+  font-size: 30px;
 }
