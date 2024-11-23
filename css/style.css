@@ -1,5 +1,12 @@
-body {
+html {
   background-color: #ffbb8f;
+}
+body {
+}
+
+h2 {
+  font-family: 'Chewy';
+  font-size: 48px;
 }
 
 .header {
@@ -8,7 +15,8 @@ body {
   justify-content: space-between;
   height: 100px;
 
-  background-color: rgb(242, 155, 42);
+  /* background-color: rgb(242, 155, 42); */
+  background-image: linear-gradient(to left, #f29b2a, rgb(255, 196, 33));
 
   padding: 0 10px;
 
@@ -38,7 +46,7 @@ body {
   height: 500px;
   width: 100%;
 
-  filter: brightness(0.7) blur(1px);
+  filter: brightness(0.7);
 }
 
 .hero-text {
@@ -65,4 +73,45 @@ body {
 .hero-text:hover {
   font-size: 90px;
   text-decoration-color: #eeeeee;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: center;
+  margin: 5%;
+}
+
+.reasons-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 350px;
+  background-color: #f29b2a;
+
+  width: 1000px;
+  margin: 13px 10px;
+
+  box-shadow: 0 5px 5px black;
+  transition: transform 5 ease-in-out, box-shadow 5 ease-in-out;
+}
+
+.reasons-card:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 9px 9px rgba(black, 0.3);
+}
+.reasons-card-img,
+.reasons-card-video {
+  height: 350px;
+  width: 500px;
+}
+.reasons-card-text {
+  width: 370px;
+  font-family: 'Open sans';
+  font-size: 24px;
+  margin: 10px 0;
 }
