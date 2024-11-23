@@ -1,26 +1,33 @@
+/* Initializing the HTML page to have the background colour of a nice peach tone */
 html {
   background-color: #ffbb8f;
 }
+
+/* Added a linear-gradient to the body of the html to provide a transition from the orange to peach colours */
 body {
+  background-image: linear-gradient(180deg, #f29b2a 20%, #ffbb8f 50%);
 }
 
+/* One of my favourite fonts with a more playful touch "Chewy" as our H2's font */
 h2 {
   font-family: 'Chewy';
   font-size: 48px;
 }
 
-.header {
+/* initial styling for header and footer elements since layout is going to genreeally be the same */
+
+.header,
+.footer {
   display: flex;
   align-items: center;
+
+  /* space between is very useful for getting elements pushed to the edges */
   justify-content: space-between;
+
+  background-color: #f29b2a;
   height: 100px;
 
-  /* background-color: rgb(242, 155, 42); */
-  background-image: linear-gradient(to left, #f29b2a, rgb(255, 196, 33));
-
   padding: 0 10px;
-
-  box-shadow: 2px 2px 2px;
 }
 
 .header-img {
@@ -31,13 +38,19 @@ h2 {
   color: #eeeeee;
   font-family: 'Chewy';
   font-size: 30px;
+
+  /* small text shadow added with a similar colour to what is used in Maynards' logo */
+  text-shadow: 3px 2px 2px rgb(0, 0, 39);
 }
 
+/* Hero image sizing set with flexbox display initialized */
 .hero {
   height: 500px;
   display: flex;
 }
 
+/* Relative position with the same height as parent with full page width allows me to place text with absolute position 
+on top of the sibling element easily to create a hero */
 .hero-img {
   position: relative;
   background-position: center;
@@ -49,6 +62,9 @@ h2 {
   filter: brightness(0.7);
 }
 
+/* absolute positioning used to place text on top of hero image
+    text is then moved using top, left, and transform:translate() to the middle of the screen 
+   applied my second font choice here, Caveat Brush as a little more of a serious tone than Chewy */
 .hero-text {
   position: absolute;
 
@@ -64,54 +80,149 @@ h2 {
 
   color: #eeeeee;
 
-  text-decoration: underline;
-  text-decoration-color: transparent;
-
-  transition: 1.5s ease-in-out;
+  text-shadow: 0 0 0 transparent;
+  transition: 0.5s ease-in-out;
 }
 
+/* simple hover effect increase font size and adding a text shadow for better readability
+    transform: scale does not work here in the way I would prefer  */
 .hero-text:hover {
-  font-size: 90px;
-  text-decoration-color: #eeeeee;
+  font-size: 78px;
+
+  text-shadow: 0 7px 7px #111111;
 }
 
+/* Displaying all child elements of this in a column form as I want each immediate child element to have their own
+space as a card  */
 .reasons {
   display: flex;
   flex-direction: column;
 
   gap: 1rem;
+  margin: 5%;
+
+  text-align: center;
 
   align-items: center;
   justify-content: center;
-  margin: 5%;
 }
 
+/* container for reasons-aside and reasons-card */
+.reasons-item {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reasons-aside {
+  font-family: 'Chewy';
+  font-style: italic;
+  font-size: 32px;
+}
+
+/* sets the content inside of each card to be place horizontally, while also adding a small margin and box shadow for 
+much easier object comprehension */
 .reasons-card {
   display: flex;
   flex-direction: row;
+
   justify-content: space-evenly;
+  align-items: center;
+
   height: 350px;
   background-color: #f29b2a;
 
   width: 1000px;
   margin: 13px 10px;
 
-  box-shadow: 0 5px 5px black;
-  transition: transform 5 ease-in-out, box-shadow 5 ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
+/*  hover effect  that increases element content's size to 107% of original
+    as well as provide a strong box shadow during the hover*/
 .reasons-card:hover {
-  transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 9px 9px rgba(black, 0.3);
+  transform: scale(1.07) translateY(-5px);
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.5);
 }
 .reasons-card-img,
 .reasons-card-video {
-  height: 350px;
-  width: 500px;
+  height: 310px;
+  width: 400px;
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.3);
 }
 .reasons-card-text {
   width: 370px;
-  font-family: 'Open sans';
-  font-size: 24px;
+  height: 300px;
   margin: 10px 0;
+
+  color: white;
+
+  text-shadow: 3px 3px 3px #111111;
+  font-family: 'Open sans';
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* A lot of the footer styling is directly from the semantic element styling with the header near the top of this page */
+.footer {
+  height: 150px;
+  font-weight: 200;
+  font-family: 'Open sans';
+}
+
+/* Company img and info are held in this container */
+.footer-company {
+  display: flex;
+  height: 130px;
+  width: 500px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-company-img {
+  height: 100px;
+  width: 60%;
+}
+
+.footer-company-info {
+  width: 400px;
+  font-size: 16px;
+}
+
+/* horizontal ordering through flexbox once again used for the contact us form */
+.footer-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 10px;
+  height: 130px;
+  width: 400px;
+  gap: 10px;
+}
+
+/* while the ordering was horizontal for most sections, I chose vertical here due to space preferences*/
+.footer-contact-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+/* directly targetting the size of the textarea child to increase it's size for aesthetic purposes */
+.footer-contact-textarea > textarea {
+  height: 60px;
+}
+
+/* simple button styling, making the default border instead transparent */
+.footer-contact-btn {
+  background-color: #ffbb8f;
+  color: #111111;
+
+  height: 30px;
+
+  border-radius: 1rem;
+  border-color: transparent;
 }

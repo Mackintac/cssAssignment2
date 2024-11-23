@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- HTML Head element containing vital metadata -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,85 +21,167 @@
     <!-- Relates the css files for use with this html document -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Title and icon/favicon to the tab identification -->
     <title>Fuzzy Peaches | Maynards</title>
+    <link rel="icon" type="image/x-icon" href="./public/Maynards.png" />
   </head>
 
+  <!-- body element declaration -->
   <body>
+    <!-- A simple header of the company logo and established date -->
     <header class="header">
-      <img class="header-img" src="./public/Maynards.png" alt="Maynards Logo" />
+      <img
+        class="header-img"
+        src="./public/Maynards.png"
+        alt="Maynards Sweets Company Logo"
+      />
       <div class="header-estab">
-        <p>Est. 1902</p>
+        <p>Est. 1896</p>
       </div>
     </header>
     <main>
+      <!-- Hero image which contains a growing or "scaling" hover effect for the text -->
       <section class="hero">
+        <!-- I made the image myself. -->
         <img
           class="hero-img"
           src="./public/friends-enjoying-maynards-original.png"
           alt="Just a couple of pals enjoying some obviously real Maynards Fuzzy Peaches"
         />
         <div class="hero-text">
+          <!-- Used an H1 here as this is the hero and it is used to show the idea of the page -->
           <h1>Why are Maynards Fuzzy Peaches so great?</h1>
         </div>
       </section>
 
+      <!-- Separated reasons into it's own section, rather than use nthChild I prefered to move the aside text in the second -->
+      <!-- element -->
       <section class="reasons">
         <h2>Lets Explore The Reasons Why</h2>
-        <section class="reasons-card">
-          <img
-            src="./public/hand-holding-fuzzy.jpg"
-            alt="A hand holding out some very nice looking Maynards Fuzzy Peaches"
-            class="reasons-card-img"
-          />
-          <div class="reasons-card-text">
-            <p>
-              Maynards Fuzzy Peaches stand out with their soft, rounded peach
-              shapes, lightly dusted in a sparkling sugar coating. The warm
-              orange and yellow hues mimic a real peach, adding playful charm.
-            </p>
-          </div>
+
+        <section class="reasons-item">
+          <!-- I chose to use the aside element due to the text simply doing it's own small attention grabbing for
+           the main chunk of the parent element's structure  -->
+          <aside class="reasons-aside">Looks Good</aside>
+          <section class="reasons-card">
+            <img
+              src="./public/hand-holding-fuzzy.jpg"
+              alt="A hand holding out some very nice looking Maynards Fuzzy Peaches"
+              class="reasons-card-img"
+            />
+            <div class="reasons-card-text">
+              <p>
+                Maynards Fuzzy Peaches stand out with their soft, rounded peach
+                shapes, lightly dusted in a sparkling sugar coating. The warm
+                orange and yellow hues mimic a real peach, adding playful charm.
+              </p>
+            </div>
+          </section>
         </section>
 
-        <section class="reasons-card">
-          <div class="reasons-card-text">
-            <p>
-              Maynards Fuzzy Peaches deliver a burst of juicy peach flavor with
-              every bite. Their tangy sweetness is perfectly balanced, leaving a
-              refreshing, mouthwatering zing that keeps you coming back for
-              more.
-            </p>
-            <img src="" alt="" class="reasons-card-img" />
-          </div>
+        <section class="reasons-item">
+          <section class="reasons-card">
+            <div class="reasons-card-text">
+              <p>
+                Maynards Fuzzy Peaches deliver a burst of juicy peach flavor
+                with every bite. Their tangy sweetness is perfectly balanced,
+                leaving a refreshing, mouthwatering zing that keeps you coming
+                back for more.
+              </p>
+            </div>
+            <img
+              src="./public/eating-with-your-eyes-closed-500x383.jpg"
+              alt="A woman eating some very nice looking real Maynards Fuzzy Peaches"
+              class="reasons-card-img"
+            />
+          </section>
+          <aside class="reasons-aside">Tastes Good</aside>
         </section>
 
-        <section class="reasons-card">
-          <iframe
-            class="reasons-card-video"
-            width="0"
-            height="350"
-            src="https://www.youtube.com/embed/8BKbu_s8p1Q?t=441"
-            title="How To Eat To Build Muscle &amp; Lose Fat (Lean Bulking Full Day Of Eating)"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+        <!-- I directly copied the embeded information from youtube through their "copy embed" option
+         to display a video on the subject, also introducing the user to another type of media on the page -->
+        <section class="reasons-item">
+          <aside class="reasons-aside">Helps Workouts</aside>
+          <section class="reasons-card">
+            <iframe
+              class="reasons-card-video"
+              width="0"
+              height="350"
+              src="https://www.youtube.com/embed/8BKbu_s8p1Q?t=441"
+              title="How To Eat To Build Muscle &amp; Lose Fat (Lean Bulking Full Day Of Eating)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
 
-          <div class="reasons-card-text">
-            <p>
-              Maynards Fuzzy Peaches can provide athletes with a quick energy
-              boost during workouts. Their fast-digesting sugars replenish
-              glycogen levels, offering an immediate source of fuel to maintain
-              stamina and performance.
-            </p>
-            <p>
-              Here is a video that mentions this by well-known science-based
-              bodybuilder, Jeff Nippard.
-            </p>
-          </div>
+            <div class="reasons-card-text">
+              <p>
+                Maynards Fuzzy Peaches can provide athletes with a quick energy
+                boost during workouts. Their fast-digesting sugars replenish
+                glycogen levels, offering an immediate source of fuel to
+                maintain stamina and performance.
+              </p>
+              <p>
+                Here is a video that mentions this by well-known science-based
+                bodybuilder, Jeff Nippard.
+              </p>
+            </div>
+          </section>
         </section>
       </section>
     </main>
-    <footer class="footer"></footer>
+
+    <!-- Taking the same initial flex flow as the header, company info/img on the left and contact page on
+     the right side of the header. -->
+    <footer class="footer">
+      <section class="footer-company">
+        <img
+          src="./public/Maynards.png"
+          alt="Maynards Sweets Company Logo"
+          class="footer-company-img"
+        />
+        <section class="footer-company-info">
+          <p>49 Dunlevy Ave #130</p>
+          <p>Vancouver, British Columbia</p>
+          <p>Canada V6A 3A3</p>
+        </section>
+      </section>
+
+      <!-- Very simple contact us form with an email, full name, and main message/inquiry area followed
+       by a submit button -->
+      <form class="footer-contact">
+        <div class="footer-contact-fields">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Your full name here"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+        </div>
+        <div class="footer-contact-textarea">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your inquiry"
+            required
+          ></textarea>
+        </div>
+        <button class="footer-contact-btn" type="submit">Submit</button>
+      </form>
+    </footer>
   </body>
 </html>
